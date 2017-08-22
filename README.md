@@ -1,4 +1,4 @@
-# Leitor-Email-OpenPOP # Racass #
+# Reader-Email-OpenPOP # Racass #
 
 
 This is a simple E-mail reader and Sender.
