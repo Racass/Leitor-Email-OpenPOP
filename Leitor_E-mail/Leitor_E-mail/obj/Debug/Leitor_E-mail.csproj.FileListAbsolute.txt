@@ -1,0 +1,14 @@
+c:\users\rafael.cassiolato\documents\visual studio 2013\Projects\Leitor_E-mail\Leitor_E-mail\bin\Debug\Leitor_E-mail.exe.config
+C:\Users\rafael.cassiolato\Documents\Visual Studio 2013\Projects\Leitor_E-mail\Leitor_E-mail\bin\Debug\Leitor_E-mail.exe
+C:\Users\rafael.cassiolato\Documents\Visual Studio 2013\Projects\Leitor_E-mail\Leitor_E-mail\bin\Debug\Leitor_E-mail.pdb
+C:\Users\rafael.cassiolato\Documents\Visual Studio 2013\Projects\Leitor_E-mail\Leitor_E-mail\obj\Debug\Leitor_E_mail.Properties.Resources.resources
+C:\Users\rafael.cassiolato\Documents\Visual Studio 2013\Projects\Leitor_E-mail\Leitor_E-mail\obj\Debug\Leitor_E-mail.csproj.GenerateResource.Cache
+C:\Users\rafael.cassiolato\Documents\Visual Studio 2013\Projects\Leitor_E-mail\Leitor_E-mail\obj\Debug\Leitor_E-mail.exe
+C:\Users\rafael.cassiolato\Documents\Visual Studio 2013\Projects\Leitor_E-mail\Leitor_E-mail\obj\Debug\Leitor_E-mail.pdb
+C:\Users\rafael.cassiolato\Documents\Visual Studio 2013\Projects\Leitor_E-mail\Leitor_E-mail\bin\Debug\OpenPop.dll
+C:\Users\rafael.cassiolato\documents\visual studio 2013\Projects\Leitor_E-mail\Leitor_E-mail\bin\Debug\Leitor_E-mail.exe.manifest
+C:\Users\rafael.cassiolato\documents\visual studio 2013\Projects\Leitor_E-mail\Leitor_E-mail\bin\Debug\Leitor_E-mail.application
+C:\Users\rafael.cassiolato\documents\visual studio 2013\Projects\Leitor_E-mail\Leitor_E-mail\obj\Debug\Leitor_E-mail.exe.manifest
+C:\Users\rafael.cassiolato\documents\visual studio 2013\Projects\Leitor_E-mail\Leitor_E-mail\obj\Debug\Leitor_E-mail.application
+C:\Users\rafael.cassiolato\Documents\Visual Studio 2013\Projects\Leitor_E-mail\Leitor_E-mail\obj\Debug\Leitor_E-mail.csprojResolveAssemblyReference.cache
+C:\Users\rafael.cassiolato\Documents\Visual Studio 2013\Projects\Leitor_E-mail\Leitor_E-mail\obj\Debug\Leitor_E_mail.Email.resources
