@@ -28,3 +28,4 @@ credits for OPENPOP: https://github.com/foens/hpop
 * Add the option to use more than one mail
 * Add the option to Order Mails in a List 
 * Add the option to exclude the mails selected on the list
+* Translations
