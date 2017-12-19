@@ -8,3 +8,14 @@ C:\Users\rafael.cassiolato\Documents\Visual Studio 2013\Projects\Leitor_E-mail\L
 C:\Users\rafael.cassiolato\Documents\Visual Studio 2013\Projects\Leitor_E-mail\Leitor_E-mail\obj\Debug\Leitor_E-mail.pdb
 C:\Users\rafael.cassiolato\Documents\Visual Studio 2013\Projects\Leitor_E-mail\Leitor_E-mail\obj\Debug\Leitor_E_mail.Form1.resources
 C:\Users\rafael.cassiolato\Documents\Visual Studio 2013\Projects\Leitor_E-mail\Leitor_E-mail\bin\Debug\OpenPop.dll
+C:\Projects\rafael.cassiolato\Próprios\Cliente de Email\Leitor_E-mail\bin\Debug\Leitor_E-mail.exe.config
+C:\Projects\rafael.cassiolato\Próprios\Cliente de Email\Leitor_E-mail\obj\Debug\Leitor_E-mail.exe
+C:\Projects\rafael.cassiolato\Próprios\Cliente de Email\Leitor_E-mail\obj\Debug\Leitor_E-mail.pdb
+C:\Projects\rafael.cassiolato\Próprios\Cliente de Email\Leitor_E-mail\obj\Debug\Leitor_E-mail.csprojResolveAssemblyReference.cache
+C:\Projects\rafael.cassiolato\Próprios\Cliente de Email\Leitor_E-mail\obj\Debug\Leitor_E_mail.Principal.resources
+C:\Projects\rafael.cassiolato\Próprios\Cliente de Email\Leitor_E-mail\obj\Debug\Leitor_E_mail.Properties.Resources.resources
+C:\Projects\rafael.cassiolato\Próprios\Cliente de Email\Leitor_E-mail\obj\Debug\Leitor_E-mail.csproj.GenerateResource.Cache
+C:\Projects\rafael.cassiolato\Próprios\Cliente de Email\Leitor_E-mail\bin\Debug\Leitor_E-mail.exe
+C:\Projects\rafael.cassiolato\Próprios\Cliente de Email\Leitor_E-mail\bin\Debug\Leitor_E-mail.pdb
+C:\Projects\rafael.cassiolato\Próprios\Cliente de Email\Leitor_E-mail\bin\Debug\OpenPop.dll
+C:\Projects\rafael.cassiolato\Próprios\Cliente de Email\Leitor_E-mail\obj\Debug\Leitor_E_mail.Forms.EnviarEmail.resources
