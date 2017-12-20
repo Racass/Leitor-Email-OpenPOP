@@ -30,6 +30,10 @@ credits for OPENPOP: https://github.com/foens/hpop
 * Add the option to exclude the mails selected on the list
 * Translations
 * ~New form to open emails~
+* New form to add servers and ports to CSV
+* New form to create standard mail 
+* New form to storage standards emails/pass
+* Chosse storaged emails/pass to login automaticly from a list/combobox
 
 
 # Concluded:
