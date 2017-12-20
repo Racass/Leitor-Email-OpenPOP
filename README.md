@@ -11,11 +11,11 @@ credits for OPENPOP: https://github.com/foens/hpop
 
 # To do
 
-* Utilize a CSV file to storage SMTP and POP ports and hosts
+* ~Utilize a CSV file to storage SMTP and POP ports and hosts~
 * Add the option to send an email from a raw txt file
 * Add the option to send automatic emails from a CSV using "subject;to;CC;raw-txt-cam;"
 * Add the option to send automatic emails from a CSV list of mails
-* Remove the server and ports from UI
+* ~Remove the server and ports from UI~
 * Create a local storage for mails
 * Add the option "remind me" mail and pass
 * Add the option for "common" receivers
@@ -29,3 +29,11 @@ credits for OPENPOP: https://github.com/foens/hpop
 * Add the option to Order Mails in a List 
 * Add the option to exclude the mails selected on the list
 * Translations
+* ~New form to open emails~
+
+
+# Concluded:
+
+* Utilize a CSV file to storage SMTP and POP ports and hosts
+* Remove the server and ports from UI
+* New form to open emails
