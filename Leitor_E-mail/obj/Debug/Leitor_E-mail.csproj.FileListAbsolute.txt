@@ -19,3 +19,5 @@ C:\Projects\rafael.cassiolato\Próprios\Cliente de Email\Leitor_E-mail\bin\Debug
 C:\Projects\rafael.cassiolato\Próprios\Cliente de Email\Leitor_E-mail\bin\Debug\Leitor_E-mail.pdb
 C:\Projects\rafael.cassiolato\Próprios\Cliente de Email\Leitor_E-mail\bin\Debug\OpenPop.dll
 C:\Projects\rafael.cassiolato\Próprios\Cliente de Email\Leitor_E-mail\obj\Debug\Leitor_E_mail.Forms.EnviarEmail.resources
+C:\Projects\rafael.cassiolato\Próprios\Cliente de Email\Leitor_E-mail\bin\Debug\Resources\server.csv
+C:\Projects\rafael.cassiolato\Próprios\Cliente de Email\Leitor_E-mail\obj\Debug\Leitor_E_mail.Forms.Email.resources

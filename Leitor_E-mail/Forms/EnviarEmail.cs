@@ -32,13 +32,10 @@ namespace Leitor_E_mail.Forms
         }
         private void EnviarEmail_Load(object sender, EventArgs e)
         {
-            De.Text = Referencia.refPrin.paraTextBox.Text;
-            para.Text = Referencia.refPrin.deTextBox.Text;
-            if(Referencia.refPrin.assunto.Text != "")
-                Assunto.Text = "RES: " + Referencia.refPrin.assunto.Text;
+            De.Text = Referencia.refPrin.email.Text;
+            //para.Text = Referencia.refPrin.deTextBox.Text;
         }
         #endregion
-
         #region FormEvents
         private void Anexo_Click(object sender, EventArgs e)
         {
@@ -59,9 +56,6 @@ namespace Leitor_E_mail.Forms
             this.Close();
         }
         #endregion
-
-
-
         #region EnviaEmail
         void Enviar_Email()
         {
@@ -79,8 +73,8 @@ namespace Leitor_E_mail.Forms
             st.EnableSsl = true; //Ativa o modo SSL (criptografia do servidor OUTLOOK)
             st.UseDefaultCredentials = false; // Desativa o uso de credenciais padroes
             st.Credentials = new NetworkCredential(De.Text, Referencia.refPrin.senha.Text); // Define as credenciais do smtp ####### WINDOWS FORM TEXT ##########
-            st.Host = Referencia.refPrin.smtp.Text;
-            st.Port = Convert.ToInt32(Referencia.refPrin.portaSMTP.Text);
+            st.Host = infoCon.serverSMTP;
+            st.Port = Convert.ToInt32(infoCon.portaSMTP);
             Thread td = new System.Threading.Thread(new System.Threading.ThreadStart(EnviaEmail));
             td.SetApartmentState(System.Threading.ApartmentState.STA);
             td.IsBackground = true;

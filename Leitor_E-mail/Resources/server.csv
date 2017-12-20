@@ -1,0 +1,2 @@
+﻿server;server.smtp;porta.smtp;server.pop;porta.pop;SSL;
+outlook;smtp-mail.outlook.com;587;pop-mail.outlook.com;995;Y;

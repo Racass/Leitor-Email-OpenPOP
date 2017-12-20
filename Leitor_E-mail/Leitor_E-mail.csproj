@@ -49,7 +49,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="E-mail.cs" />
+    <Compile Include="Forms\Email.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Email.Designer.cs">
+      <DependentUpon>Email.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilidade\infoCon.cs" />
+    <Compile Include="Utilidade\Listas\arqCSV.cs" />
+    <Compile Include="Utilidade\Listas\E-mail.cs" />
     <Compile Include="Forms\EnviarEmail.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +75,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utilidade\PrinAccess.cs" />
     <Compile Include="Utilidade\Referencia.cs" />
+    <EmbeddedResource Include="Forms\Email.resx">
+      <DependentUpon>Email.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\EnviarEmail.resx">
       <DependentUpon>EnviarEmail.cs</DependentUpon>
     </EmbeddedResource>
@@ -81,6 +92,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -92,6 +104,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="Resources\server.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -17,13 +17,16 @@ using System.Net;
 using Leitor_E_mail.Ler;
 using Leitor_E_mail.Utilidade;
 using Leitor_E_mail.Forms;
+using Leitor_E_mail.Utilidade.Listas;
 
 namespace Leitor_E_mail
 {
     public partial class Principal : Form
     {
         List<E_mail> _emails = new List<E_mail>();
-        bool _useSsl = true;  
+        List<arqCSV> servers = new List<arqCSV>();
+        bool con = false;
+        int cnt = 0;
 
         #region Constructors
         public Principal()
@@ -33,30 +36,50 @@ namespace Leitor_E_mail
         private void Form1_Load(object sender, EventArgs e)
         {
             Referencia.refPrin = this;
+            string linha;
+            using (StreamReader leitor = new StreamReader(Path.GetDirectoryName(System.AppDomain.CurrentDomain.BaseDirectory) + @"\Resources\server.csv"))
+            {
+                string[] linhaSep;
+                while (leitor.EndOfStream == false && (linha = leitor.ReadLine()).Length > 4)
+                {
+                    linhaSep = delimit(linha);
+                    servers.Add(new arqCSV());
+                    servers[cnt].server = linhaSep[0];
+                    servers[cnt].serverSMTP = linhaSep[1];
+                    servers[cnt].portaSMTP = linhaSep[2];
+                    servers[cnt].serverPOP = linhaSep[3];
+                    servers[cnt].portaPOP = linhaSep[4];
+
+                    if (linhaSep[5] == "Y")
+                        servers[cnt].ssl = true;
+                    else
+                        servers[cnt].ssl = false;
+
+                    cnt++;
+                }
+            }
         }
+
+        #region ConsProcessor
+        private string[] delimit(string text)
+        {
+            return text.Split(';');
+        }
+
+        #endregion
         #endregion
         #region ProcessamentoPublic
         public void ControlButtons(bool Enabled)
         {
             Ler.Enabled = Enabled;
-            dataDateTimePicker.Enabled = Enabled;
-            Qtd.Enabled = Enabled;
-            portaPP.Enabled = Enabled;
-            portaSMTP.Enabled = Enabled;
-            pop.Enabled = Enabled;
-            smtp.Enabled = Enabled;
-            senha.Enabled = Enabled;
-            paraTextBox.Enabled = Enabled;
-            deTextBox.Enabled = Enabled;
-            assunto.Enabled = Enabled;
         }
         public void AtualizarDataBindings()
         {
             // Limpando os bindings.
-            deTextBox.DataBindings.Clear();
-            paraTextBox.DataBindings.Clear();
-            dataDateTimePicker.DataBindings.Clear();
-            conteudoTextBox.DataBindings.Clear();
+            //deTextBox.DataBindings.Clear();
+            //paraTextBox.DataBindings.Clear();
+            //dataDateTimePicker.DataBindings.Clear();
+            //conteudoTextBox.DataBindings.Clear();
             emailsListBox.DataSource = null;
             emailsBindingSource.DataSource = null;
 
@@ -64,13 +87,28 @@ namespace Leitor_E_mail
             emailsBindingSource.DataSource = _emails;
             emailsListBox.DataSource = emailsBindingSource;
             emailsListBox.DisplayMember = "Assunto";
-            deTextBox.DataBindings.Add(new Binding("Text", emailsBindingSource, "De"));
-            paraTextBox.DataBindings.Add(new Binding("Text", emailsBindingSource, "Para"));
-            dataDateTimePicker.DataBindings.Add(new Binding("Value", emailsBindingSource, "Data"));
-            conteudoTextBox.DataBindings.Add(new Binding("Text", emailsBindingSource, "ConteudoTexto"));
+            //deTextBox.DataBindings.Add(new Binding("Text", emailsBindingSource, "De"));
+            //paraTextBox.DataBindings.Add(new Binding("Text", emailsBindingSource, "Para"));
+            //dataDateTimePicker.DataBindings.Add(new Binding("Value", emailsBindingSource, "Data"));
+            //conteudoTextBox.DataBindings.Add(new Binding("Text", emailsBindingSource, "ConteudoTexto"));
         }
         #endregion
+
+        #region Processamento interno
+
+        private void connect(bool consegui, string status)
+        {
+            email.Enabled = consegui;
+            senha.Enabled = consegui;
+            Connect.Text = status;
+            Ler.Enabled = !consegui;
+            NEmail.Enabled = !consegui;
+        }
+        #endregion
+
+
         #region FormEvents
+
         private void NEmail_Click(object sender, EventArgs e)
         {
             EnviarEmail enviar = new EnviarEmail();
@@ -86,7 +124,7 @@ namespace Leitor_E_mail
         }
         private void Ler_Click(object sender, EventArgs e)
         {
-            LerEmails leitura = new LerEmails(pop.Text, portaPP.Text, true, paraTextBox.Text, senha.Text, _emails, Convert.ToInt32(Qtd.Text));
+            LerEmails leitura = new LerEmails(infoCon.serverPOP, infoCon.portaPOP, infoCon.ssl, email.Text, senha.Text, _emails, Convert.ToInt32(Qtd.Text));
             progresso.Value = 0;
             ControlButtons(false);
             leitura.iniciaThread();
@@ -101,7 +139,62 @@ namespace Leitor_E_mail
                 Cursor = Cursors.Default;
             }
         }
+        private void Connect_Click(object sender, EventArgs e)
+        {
+            if (Connect.Text != "Desconectar")
+            {
+                int linha = -1;
+                for (int i = 0; i < servers.Count; i++)
+                {
+                    if (email.Text.Contains(servers[i].server))
+                    {
+                        linha = i;
+                        break;
+                    }
+                }
+
+                if (linha == -1)
+                {
+                    MessageBox.Show("Servidor não encontrado.");
+                    con = false;
+                    return;
+                }
+                else
+                {
+                    infoCon.server = servers[linha].server;
+                    infoCon.serverSMTP = servers[linha].serverSMTP;
+                    infoCon.portaSMTP = servers[linha].portaSMTP;
+                    infoCon.serverPOP = servers[linha].serverPOP;
+                    infoCon.portaPOP = servers[linha].portaPOP;
+                    infoCon.ssl = servers[linha].ssl;
+                    con = true;
+                }
+            }
+            if (con)
+            {
+                connect(false, "Desconectar");
+                con = false;
+            }
+
+            else
+                connect(true, "Conectar");
+        }
+        private void emailsListBox_DoubleClick(object sender, EventArgs e)
+        {
+            if (emailsListBox.SelectedItem != null)
+            {
+                Email abrirEmail = new Email((E_mail)emailsBindingSource.Current);
+                abrirEmail.ShowDialog(this);
+                emailsListBox.SelectedItem = null;
+            }
+
+        }
         #endregion
+
+
+
+
+
 
     }
 }
