@@ -31,5 +31,6 @@ namespace Leitor_E_mail.Forms
             this.Close();
         }
         #endregion
+
     }
 }

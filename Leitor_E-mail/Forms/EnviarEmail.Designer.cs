@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.texto = new System.Windows.Forms.RichTextBox();
-            this.send = new System.Windows.Forms.Button();
-            this.Cancel = new System.Windows.Forms.Button();
             this.De = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.para = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.Assunto = new System.Windows.Forms.TextBox();
-            this.Anexo = new System.Windows.Forms.Button();
             this.Arquivo = new System.Windows.Forms.OpenFileDialog();
+            this.Cancel = new System.Windows.Forms.Button();
+            this.send = new System.Windows.Forms.Button();
+            this.Anexo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // texto
@@ -49,29 +49,9 @@
             this.texto.TabIndex = 0;
             this.texto.Text = "";
             // 
-            // send
-            // 
-            this.send.Location = new System.Drawing.Point(254, 313);
-            this.send.Name = "send";
-            this.send.Size = new System.Drawing.Size(75, 23);
-            this.send.TabIndex = 1;
-            this.send.Text = "Enviar";
-            this.send.UseVisualStyleBackColor = true;
-            this.send.Click += new System.EventHandler(this.send_Click);
-            // 
-            // Cancel
-            // 
-            this.Cancel.Location = new System.Drawing.Point(335, 313);
-            this.Cancel.Name = "Cancel";
-            this.Cancel.Size = new System.Drawing.Size(75, 23);
-            this.Cancel.TabIndex = 2;
-            this.Cancel.Text = "Cancelar";
-            this.Cancel.UseVisualStyleBackColor = true;
-            this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
-            // 
             // De
             // 
-            this.De.Location = new System.Drawing.Point(310, 12);
+            this.De.Location = new System.Drawing.Point(310, 32);
             this.De.Name = "De";
             this.De.ReadOnly = true;
             this.De.Size = new System.Drawing.Size(100, 20);
@@ -80,7 +60,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(269, 15);
+            this.label1.Location = new System.Drawing.Point(269, 35);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(24, 13);
             this.label1.TabIndex = 4;
@@ -89,7 +69,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(269, 41);
+            this.label2.Location = new System.Drawing.Point(265, 61);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(32, 13);
             this.label2.TabIndex = 6;
@@ -97,7 +77,7 @@
             // 
             // para
             // 
-            this.para.Location = new System.Drawing.Point(310, 38);
+            this.para.Location = new System.Drawing.Point(310, 58);
             this.para.Name = "para";
             this.para.Size = new System.Drawing.Size(100, 20);
             this.para.TabIndex = 5;
@@ -105,7 +85,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(259, 67);
+            this.label3.Location = new System.Drawing.Point(259, 87);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(45, 13);
             this.label3.TabIndex = 8;
@@ -113,43 +93,80 @@
             // 
             // Assunto
             // 
-            this.Assunto.Location = new System.Drawing.Point(310, 64);
+            this.Assunto.Location = new System.Drawing.Point(310, 84);
             this.Assunto.Name = "Assunto";
             this.Assunto.Size = new System.Drawing.Size(100, 20);
             this.Assunto.TabIndex = 7;
-            // 
-            // Anexo
-            // 
-            this.Anexo.Location = new System.Drawing.Point(272, 90);
-            this.Anexo.Name = "Anexo";
-            this.Anexo.Size = new System.Drawing.Size(138, 23);
-            this.Anexo.TabIndex = 9;
-            this.Anexo.Text = "Anexo";
-            this.Anexo.UseVisualStyleBackColor = true;
-            this.Anexo.Click += new System.EventHandler(this.Anexo_Click);
             // 
             // Arquivo
             // 
             this.Arquivo.FileName = "openFileDialog1";
             // 
+            // Cancel
+            // 
+            this.Cancel.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.Cancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Cancel.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.Cancel.FlatAppearance.BorderSize = 0;
+            this.Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Cancel.Font = new System.Drawing.Font("Copperplate Gothic Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cancel.ForeColor = System.Drawing.Color.Red;
+            this.Cancel.Location = new System.Drawing.Point(382, 3);
+            this.Cancel.Name = "Cancel";
+            this.Cancel.Size = new System.Drawing.Size(28, 23);
+            this.Cancel.TabIndex = 20;
+            this.Cancel.Text = "X";
+            this.Cancel.UseVisualStyleBackColor = false;
+            this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
+            // 
+            // send
+            // 
+            this.send.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.send.Enabled = false;
+            this.send.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.send.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.send.Location = new System.Drawing.Point(254, 313);
+            this.send.Name = "send";
+            this.send.Size = new System.Drawing.Size(156, 23);
+            this.send.TabIndex = 33;
+            this.send.Text = "Enviar";
+            this.send.UseVisualStyleBackColor = true;
+            this.send.Click +=  new System.EventHandler(send_Click);
+            // 
+            // Anexo
+            // 
+            this.Anexo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Anexo.Enabled = false;
+            this.Anexo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Anexo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Anexo.Location = new System.Drawing.Point(254, 110);
+            this.Anexo.Name = "Anexo";
+            this.Anexo.Size = new System.Drawing.Size(156, 23);
+            this.Anexo.TabIndex = 34;
+            this.Anexo.Text = "Anexar";
+            this.Anexo.UseVisualStyleBackColor = true;
+            this.Anexo.Click += new System.EventHandler(this.Anexo_Click);
+            // 
             // EnviarEmail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.ClientSize = new System.Drawing.Size(422, 348);
             this.Controls.Add(this.Anexo);
+            this.Controls.Add(this.send);
+            this.Controls.Add(this.Cancel);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Assunto);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.para);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.De);
-            this.Controls.Add(this.Cancel);
-            this.Controls.Add(this.send);
             this.Controls.Add(this.texto);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EnviarEmail";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "EnviarEmail";
             this.Load += new System.EventHandler(this.EnviarEmail_Load);
             this.ResumeLayout(false);
@@ -160,15 +177,15 @@
         #endregion
 
         private System.Windows.Forms.RichTextBox texto;
-        private System.Windows.Forms.Button send;
-        private System.Windows.Forms.Button Cancel;
         private System.Windows.Forms.TextBox De;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox para;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox Assunto;
-        private System.Windows.Forms.Button Anexo;
         private System.Windows.Forms.OpenFileDialog Arquivo;
+        private System.Windows.Forms.Button Cancel;
+        private System.Windows.Forms.Button send;
+        private System.Windows.Forms.Button Anexo;
     }
 }

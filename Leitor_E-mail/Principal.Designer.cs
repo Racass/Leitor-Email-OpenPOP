@@ -42,6 +42,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.Qtd = new System.Windows.Forms.TextBox();
+            this.Remind = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.emailsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,7 +77,6 @@
             this.email.Name = "email";
             this.email.Size = new System.Drawing.Size(158, 20);
             this.email.TabIndex = 3;
-            this.email.Text = "rcassiolato@outlook.com";
             // 
             // NEmail
             // 
@@ -86,7 +86,7 @@
             this.NEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NEmail.Location = new System.Drawing.Point(132, 128);
             this.NEmail.Name = "NEmail";
-            this.NEmail.Size = new System.Drawing.Size(114, 23);
+            this.NEmail.Size = new System.Drawing.Size(211, 23);
             this.NEmail.TabIndex = 7;
             this.NEmail.Text = "Novo Email";
             this.NEmail.UseVisualStyleBackColor = true;
@@ -106,7 +106,6 @@
             this.senha.PasswordChar = '*';
             this.senha.Size = new System.Drawing.Size(158, 20);
             this.senha.TabIndex = 12;
-            this.senha.Text = "rafael558471";
             // 
             // Arquivo
             // 
@@ -172,6 +171,17 @@
             this.Qtd.TabIndex = 22;
             this.Qtd.Text = "10";
             // 
+            // Remind
+            // 
+            this.Remind.AutoSize = true;
+            this.Remind.Location = new System.Drawing.Point(252, 103);
+            this.Remind.Name = "Remind";
+            this.Remind.Size = new System.Drawing.Size(64, 17);
+            this.Remind.TabIndex = 23;
+            this.Remind.Text = "Lembrar";
+            this.Remind.UseVisualStyleBackColor = true;
+            this.Remind.CheckedChanged += new System.EventHandler(this.Remind_CheckedChanged);
+            // 
             // Principal
             // 
             this.AcceptButton = this.NEmail;
@@ -181,6 +191,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.ClientSize = new System.Drawing.Size(359, 387);
+            this.Controls.Add(this.Remind);
             this.Controls.Add(this.Qtd);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -217,6 +228,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.TextBox Qtd;
+        private System.Windows.Forms.CheckBox Remind;
     }
 }
 

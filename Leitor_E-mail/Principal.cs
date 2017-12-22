@@ -58,6 +58,8 @@ namespace Leitor_E_mail
                     cnt++;
                 }
             }
+            email.Text = Properties.Settings.Default.StdMail;
+            senha.Text = Properties.Settings.Default.StdPass;
         }
 
         #region ConsProcessor
@@ -93,7 +95,6 @@ namespace Leitor_E_mail
             //conteudoTextBox.DataBindings.Add(new Binding("Text", emailsBindingSource, "ConteudoTexto"));
         }
         #endregion
-
         #region Processamento interno
 
         private void connect(bool consegui, string status)
@@ -105,8 +106,6 @@ namespace Leitor_E_mail
             NEmail.Enabled = !consegui;
         }
         #endregion
-
-
         #region FormEvents
 
         private void NEmail_Click(object sender, EventArgs e)
@@ -117,10 +116,6 @@ namespace Leitor_E_mail
         private void sair_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-        private void assunto_TextChanged(object sender, EventArgs e)
-        {
-
         }
         private void Ler_Click(object sender, EventArgs e)
         {
@@ -189,12 +184,20 @@ namespace Leitor_E_mail
             }
 
         }
+        private void Remind_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Remind.Checked)
+            {
+                Properties.Settings.Default.StdMail = email.Text;
+                Properties.Settings.Default.StdPass = senha.Text;
+            }
+            else
+            {
+                Properties.Settings.Default.StdMail = "";
+                Properties.Settings.Default.StdPass = "";
+            }
+        }
         #endregion
-
-
-
-
-
 
     }
 }
