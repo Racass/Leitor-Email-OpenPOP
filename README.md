@@ -16,8 +16,8 @@ credits for OPENPOP: https://github.com/foens/hpop
 * Add the option to send automatic emails from a CSV using "subject;to;CC;raw-txt-cam;"
 * Add the option to send automatic emails from a CSV list of mails
 * ~Remove the server and ports from UI~
-* Create a local storage for mails
-* Add the option "remind me" mail and pass
+* ~Create a local storage for mails~ -- Needs Crypto. Not use (maybe future)
+* ~Add the option "remind me" mail and pass~
 * Add the option for "common" receivers
 * Add the option to send timer-triggered mails
 * Add the option to read HTML mails
@@ -33,7 +33,7 @@ credits for OPENPOP: https://github.com/foens/hpop
 * ~New form to add servers and ports to CSV~
 * New form to create standard mail 
 * New form to storage standards emails/pass
-* Chosse storaged emails/pass to login automaticly from a list/combobox
+* ~storaged emails/pass to login automaticly~
 
 
 # Concluded:
@@ -43,3 +43,5 @@ credits for OPENPOP: https://github.com/foens/hpop
 * New form to open emails
 * Better UI*
 * New form to add servers and ports to CSV
+* Add the option "remind me" mail and pass
+* storaged emails/pass to login automaticly
