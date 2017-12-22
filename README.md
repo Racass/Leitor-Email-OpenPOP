@@ -21,7 +21,7 @@ credits for OPENPOP: https://github.com/foens/hpop
 * Add the option for "common" receivers
 * Add the option to send timer-triggered mails
 * Add the option to read HTML mails
-* Better UI
+* ~Better UI~
 * Memory management
 * Use NotSimpleLogger to create DEBUG and FinalVersion logs
 * Add the automatic refresh option for new mails
@@ -30,7 +30,7 @@ credits for OPENPOP: https://github.com/foens/hpop
 * Add the option to exclude the mails selected on the list
 * Translations
 * ~New form to open emails~
-* New form to add servers and ports to CSV
+* ~New form to add servers and ports to CSV~
 * New form to create standard mail 
 * New form to storage standards emails/pass
 * Chosse storaged emails/pass to login automaticly from a list/combobox
@@ -41,3 +41,5 @@ credits for OPENPOP: https://github.com/foens/hpop
 * Utilize a CSV file to storage SMTP and POP ports and hosts
 * Remove the server and ports from UI
 * New form to open emails
+* Better UI*
+* New form to add servers and ports to CSV
