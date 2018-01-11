@@ -43,6 +43,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.Qtd = new System.Windows.Forms.TextBox();
             this.Remind = new System.Windows.Forms.CheckBox();
+            this.AutoMail = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.emailsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -182,6 +183,10 @@
             this.Remind.UseVisualStyleBackColor = true;
             this.Remind.CheckedChanged += new System.EventHandler(this.Remind_CheckedChanged);
             // 
+            // AutoMail
+            // 
+            this.AutoMail.Interval = 10;
+            // 
             // Principal
             // 
             this.AcceptButton = this.NEmail;
@@ -229,6 +234,7 @@
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.TextBox Qtd;
         private System.Windows.Forms.CheckBox Remind;
+        private System.Windows.Forms.Timer AutoMail;
     }
 }
 

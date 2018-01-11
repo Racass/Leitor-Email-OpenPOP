@@ -99,5 +99,10 @@ namespace Leitor_E_mail.Forms
             }
         }
         #endregion
+
+        private void carregar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

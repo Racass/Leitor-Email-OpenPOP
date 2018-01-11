@@ -104,6 +104,8 @@ namespace Leitor_E_mail
             Connect.Text = status;
             Ler.Enabled = !consegui;
             NEmail.Enabled = !consegui;
+            if (consegui)
+                progresso.Value = 0;
         }
         #endregion
         #region FormEvents
@@ -190,11 +192,13 @@ namespace Leitor_E_mail
             {
                 Properties.Settings.Default.StdMail = email.Text;
                 Properties.Settings.Default.StdPass = senha.Text;
+                Properties.Settings.Default.Save();
             }
             else
             {
                 Properties.Settings.Default.StdMail = "";
                 Properties.Settings.Default.StdPass = "";
+                Properties.Settings.Default.Save();
             }
         }
         #endregion

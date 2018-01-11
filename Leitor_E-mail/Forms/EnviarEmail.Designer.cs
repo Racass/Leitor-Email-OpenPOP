@@ -39,6 +39,9 @@
             this.Cancel = new System.Windows.Forms.Button();
             this.send = new System.Windows.Forms.Button();
             this.Anexo = new System.Windows.Forms.Button();
+            this.carregar = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.qtdanexos = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // texto
@@ -122,7 +125,6 @@
             // send
             // 
             this.send.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.send.Enabled = false;
             this.send.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.send.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.send.Location = new System.Drawing.Point(254, 313);
@@ -131,15 +133,14 @@
             this.send.TabIndex = 33;
             this.send.Text = "Enviar";
             this.send.UseVisualStyleBackColor = true;
-            this.send.Click +=  new System.EventHandler(send_Click);
+            this.send.Click += new System.EventHandler(this.send_Click);
             // 
             // Anexo
             // 
             this.Anexo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Anexo.Enabled = false;
             this.Anexo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Anexo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Anexo.Location = new System.Drawing.Point(254, 110);
+            this.Anexo.Location = new System.Drawing.Point(254, 136);
             this.Anexo.Name = "Anexo";
             this.Anexo.Size = new System.Drawing.Size(156, 23);
             this.Anexo.TabIndex = 34;
@@ -147,12 +148,45 @@
             this.Anexo.UseVisualStyleBackColor = true;
             this.Anexo.Click += new System.EventHandler(this.Anexo_Click);
             // 
+            // carregar
+            // 
+            this.carregar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.carregar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.carregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.carregar.Location = new System.Drawing.Point(254, 165);
+            this.carregar.Name = "carregar";
+            this.carregar.Size = new System.Drawing.Size(156, 23);
+            this.carregar.TabIndex = 35;
+            this.carregar.Text = "CarregarEmail";
+            this.carregar.UseVisualStyleBackColor = true;
+            this.carregar.Click += new System.EventHandler(this.carregar_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(259, 113);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(45, 13);
+            this.label4.TabIndex = 37;
+            this.label4.Text = "Anexos:";
+            // 
+            // qtdanexos
+            // 
+            this.qtdanexos.Enabled = false;
+            this.qtdanexos.Location = new System.Drawing.Point(310, 110);
+            this.qtdanexos.Name = "qtdanexos";
+            this.qtdanexos.Size = new System.Drawing.Size(100, 20);
+            this.qtdanexos.TabIndex = 36;
+            // 
             // EnviarEmail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.ClientSize = new System.Drawing.Size(422, 348);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.qtdanexos);
+            this.Controls.Add(this.carregar);
             this.Controls.Add(this.Anexo);
             this.Controls.Add(this.send);
             this.Controls.Add(this.Cancel);
@@ -187,5 +221,8 @@
         private System.Windows.Forms.Button Cancel;
         private System.Windows.Forms.Button send;
         private System.Windows.Forms.Button Anexo;
+        private System.Windows.Forms.Button carregar;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox qtdanexos;
     }
 }

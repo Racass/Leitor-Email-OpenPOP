@@ -21,3 +21,6 @@ C:\Projects\rafael.cassiolato\Próprios\Cliente de Email\Leitor_E-mail\obj\Debug
 C:\Projects\rafael.cassiolato\Próprios\Cliente de Email\Leitor_E-mail\bin\Debug\Resources\server.csv
 C:\Projects\rafael.cassiolato\Próprios\Cliente de Email\Leitor_E-mail\obj\Debug\Leitor_E_mail.Forms.Email.resources
 C:\Projects\rafael.cassiolato\Próprios\Cliente de Email\Leitor_E-mail\obj\Debug\Leitor_E_mail.Forms.AddServer.resources
+C:\Projects\rafael.cassiolato\Próprios\Cliente de Email\Leitor_E-mail\obj\Debug\Leitor_E-mail.csprojResolveAssemblyReference.cache
+C:\Projects\rafael.cassiolato\Próprios\Cliente de Email\Leitor_E-mail\obj\Debug\Leitor_E_mail.Forms.ConfigAutomaticMail.resources
+C:\Projects\rafael.cassiolato\Próprios\Cliente de Email\Leitor_E-mail\bin\Debug\Resources\StdMails\MailStd.txt
