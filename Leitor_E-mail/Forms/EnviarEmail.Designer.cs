@@ -42,6 +42,7 @@
             this.carregar = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.qtdanexos = new System.Windows.Forms.TextBox();
+            this.StdsChar = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // texto
@@ -153,7 +154,7 @@
             this.carregar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.carregar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.carregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.carregar.Location = new System.Drawing.Point(254, 165);
+            this.carregar.Location = new System.Drawing.Point(254, 195);
             this.carregar.Name = "carregar";
             this.carregar.Size = new System.Drawing.Size(156, 23);
             this.carregar.TabIndex = 35;
@@ -178,12 +179,21 @@
             this.qtdanexos.Size = new System.Drawing.Size(100, 20);
             this.qtdanexos.TabIndex = 36;
             // 
+            // StdsChar
+            // 
+            this.StdsChar.FormattingEnabled = true;
+            this.StdsChar.Location = new System.Drawing.Point(254, 165);
+            this.StdsChar.Name = "StdsChar";
+            this.StdsChar.Size = new System.Drawing.Size(156, 21);
+            this.StdsChar.TabIndex = 38;
+            // 
             // EnviarEmail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.ClientSize = new System.Drawing.Size(422, 348);
+            this.Controls.Add(this.StdsChar);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.qtdanexos);
             this.Controls.Add(this.carregar);
@@ -224,5 +234,6 @@
         private System.Windows.Forms.Button carregar;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox qtdanexos;
+        private System.Windows.Forms.ComboBox StdsChar;
     }
 }

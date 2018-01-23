@@ -67,6 +67,12 @@
     <Compile Include="Forms\Email.Designer.cs">
       <DependentUpon>Email.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\SetaEnvioAutomatico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SetaEnvioAutomatico.Designer.cs">
+      <DependentUpon>SetaEnvioAutomatico.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\StdMail.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +113,9 @@
     <EmbeddedResource Include="Forms\EnviarEmail.resx">
       <DependentUpon>EnviarEmail.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SetaEnvioAutomatico.resx">
+      <DependentUpon>SetaEnvioAutomatico.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\StdMail.resx">
       <DependentUpon>StdMail.cs</DependentUpon>
     </EmbeddedResource>
@@ -144,6 +153,9 @@
     <Content Include="Resources\StdMails\MailStd.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\StdSenders\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

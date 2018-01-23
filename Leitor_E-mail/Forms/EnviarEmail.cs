@@ -21,11 +21,14 @@ namespace Leitor_E_mail.Forms
 {
     public partial class EnviarEmail : Form
     {
-        string fileCam = String.Empty;
+        #region Constructors
+        #region vars
+        List<string> files = new List<string>();
         SmtpClient st = new SmtpClient();
         MailMessage email = new MailMessage();
+        Dictionary<string, string> stdMails = new Dictionary<string, string>();
+        #endregion
 
-        #region Constructors
         public EnviarEmail()
         {
             InitializeComponent();
@@ -34,15 +37,24 @@ namespace Leitor_E_mail.Forms
         {
             De.Text = Referencia.refPrin.email.Text;
             //para.Text = Referencia.refPrin.deTextBox.Text;
+            carregaListas();
+            CarregaComboBox();
         }
         #endregion
+
         #region FormEvents
+        private void carregar_Click(object sender, EventArgs e)
+        {
+            string path = stdMails[StdsChar.SelectedItem.ToString()];
+            setMailStds(path);
+        }
+
         private void Anexo_Click(object sender, EventArgs e)
         {
             DialogResult result = Arquivo.ShowDialog();
             if (result == DialogResult.OK)
             {
-                fileCam = Arquivo.InitialDirectory + Arquivo.FileName;
+                files.Add(Arquivo.InitialDirectory + Arquivo.FileName);
             }
         }
 
@@ -56,6 +68,7 @@ namespace Leitor_E_mail.Forms
             this.Close();
         }
         #endregion
+
         #region EnviaEmail
         void Enviar_Email()
         {
@@ -64,10 +77,9 @@ namespace Leitor_E_mail.Forms
             email.IsBodyHtml = false; //determina que o corpo nao e html
             email.Subject = Assunto.Text; //Assunto
             email.Body = texto.Text; // Corpo do e-mail ### máximo (?) ###
-            if (fileCam != String.Empty)
+            for (int i = 0; i < files.Count; i++)
             {
-                email.Attachments.Add(new System.Net.Mail.Attachment(fileCam));
-                fileCam = String.Empty;
+                email.Attachments.Add(new System.Net.Mail.Attachment(files[i]));
             }
 
             st.EnableSsl = true; //Ativa o modo SSL (criptografia do servidor OUTLOOK)
@@ -93,16 +105,65 @@ namespace Leitor_E_mail.Forms
                 email.Dispose();
             }
 
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 System.Windows.Forms.MessageBox.Show("Erro ao enviar email: " + ex.Message);
             }
         }
         #endregion
 
-        private void carregar_Click(object sender, EventArgs e)
+        #region Processors
+        private void carregaListas()
         {
-
+            foreach (string path in Directory.GetFiles(System.AppDomain.CurrentDomain.BaseDirectory + @"\Resources\StdMails\"))
+            {
+                if (path.Contains(".sem"))
+                {
+                    stdMails.Add(path.Replace(System.AppDomain.CurrentDomain.BaseDirectory + @"\Resources\StdMails\", "").Replace(".sem", "")
+                                , path);
+                }
+            }
         }
+        private void CarregaComboBox()
+        {
+            foreach (string key in stdMails.Keys)
+            {
+                StdsChar.Items.Add(key);
+            }
+            StdsChar.SelectedIndex = 0;
+        }
+        private void setMailStds(string path)
+        {
+            using (StreamReader leitor = new StreamReader(path))
+            {
+                texto.Text = "";
+                Assunto.Text = "";
+                files.Clear();
+                while (leitor.EndOfStream == false)
+                {
+                    string[] data = leitor.ReadLine().Split(';');
+                    if (data[0] == "anexo")
+                    {
+                        for (int i = 1; i < data.Length; i++)
+                        {
+                            files.Add(data[i]);
+                        }
+                    }
+                    if (data[0] == "assunto")
+                        Assunto.Text = data[1];
+
+                    if (data[0] == "conteudo")
+                    {
+                        for (int i = 1; i < data.Length; i++)
+                        {
+                            texto.Text += data[i] + "\n";
+                        }
+                    }
+                }
+            }
+        }
+
+        #endregion
+
     }
 }

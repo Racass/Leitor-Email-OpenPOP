@@ -44,6 +44,8 @@
             this.Qtd = new System.Windows.Forms.TextBox();
             this.Remind = new System.Windows.Forms.CheckBox();
             this.AutoMail = new System.Windows.Forms.Timer(this.components);
+            this.Std = new System.Windows.Forms.Button();
+            this.cfgStd = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.emailsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -121,7 +123,7 @@
             this.sair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sair.Font = new System.Drawing.Font("Copperplate Gothic Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sair.ForeColor = System.Drawing.Color.Red;
-            this.sair.Location = new System.Drawing.Point(12, 352);
+            this.sair.Location = new System.Drawing.Point(5, 352);
             this.sair.Name = "sair";
             this.sair.Size = new System.Drawing.Size(28, 23);
             this.sair.TabIndex = 18;
@@ -187,6 +189,32 @@
             // 
             this.AutoMail.Interval = 10;
             // 
+            // Std
+            // 
+            this.Std.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Std.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Std.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Std.Location = new System.Drawing.Point(132, 157);
+            this.Std.Name = "Std";
+            this.Std.Size = new System.Drawing.Size(211, 23);
+            this.Std.TabIndex = 24;
+            this.Std.Text = "Criar Padrão";
+            this.Std.UseVisualStyleBackColor = true;
+            this.Std.Click += new System.EventHandler(this.Std_Click);
+            // 
+            // cfgStd
+            // 
+            this.cfgStd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cfgStd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cfgStd.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cfgStd.Location = new System.Drawing.Point(39, 352);
+            this.cfgStd.Name = "cfgStd";
+            this.cfgStd.Size = new System.Drawing.Size(87, 23);
+            this.cfgStd.TabIndex = 25;
+            this.cfgStd.Text = "Config Padrão";
+            this.cfgStd.UseVisualStyleBackColor = true;
+            this.cfgStd.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Principal
             // 
             this.AcceptButton = this.NEmail;
@@ -196,6 +224,8 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.ClientSize = new System.Drawing.Size(359, 387);
+            this.Controls.Add(this.cfgStd);
+            this.Controls.Add(this.Std);
             this.Controls.Add(this.Remind);
             this.Controls.Add(this.Qtd);
             this.Controls.Add(this.label2);
@@ -235,6 +265,8 @@
         public System.Windows.Forms.TextBox Qtd;
         private System.Windows.Forms.CheckBox Remind;
         private System.Windows.Forms.Timer AutoMail;
+        private System.Windows.Forms.Button Std;
+        private System.Windows.Forms.Button cfgStd;
     }
 }
 

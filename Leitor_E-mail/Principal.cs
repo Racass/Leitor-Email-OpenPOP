@@ -109,7 +109,16 @@ namespace Leitor_E_mail
         }
         #endregion
         #region FormEvents
-
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ConfigAutomaticMail cfgMail = new ConfigAutomaticMail();
+            cfgMail.ShowDialog(this);
+        }
+        private void Std_Click(object sender, EventArgs e)
+        {
+            StdMail std = new StdMail();
+            std.ShowDialog(this);
+        }
         private void NEmail_Click(object sender, EventArgs e)
         {
             EnviarEmail enviar = new EnviarEmail();
@@ -202,6 +211,10 @@ namespace Leitor_E_mail
             }
         }
         #endregion
+
+
+
+
 
     }
 }

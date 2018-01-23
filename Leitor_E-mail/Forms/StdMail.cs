@@ -36,14 +36,18 @@ namespace Leitor_E_mail.Forms
 
         private void save_Click(object sender, EventArgs e)
         {
-            using(StreamWriter escritor = new StreamWriter(Path.GetDirectoryName(System.AppDomain.CurrentDomain.BaseDirectory) + @"\Resources\StdMails\" + assunto.Text + ".eml"))
+            using(StreamWriter escritor = new StreamWriter(Path.GetDirectoryName(System.AppDomain.CurrentDomain.BaseDirectory) + @"\Resources\StdMails\" + assunto.Text + ".sem"))
             {
                 for(int i = 0; i < fileCam.Count; i++)
                 {
                     escritor.WriteLine("anexo;" + fileCam[i] + ";");
                 }
-                escritor.WriteLine("assunto;" + assunto.Text);
-                escritor.WriteLine("conteudo;" + conteudo.Text);
+                escritor.WriteLine("assunto;" + assunto.Text + ";");
+                escritor.Write("conteudo;");
+                foreach (string line in conteudo.Lines)
+                {
+                    escritor.Write(line.Replace("\n", "") + ";");
+                }
             }
         }
     }
