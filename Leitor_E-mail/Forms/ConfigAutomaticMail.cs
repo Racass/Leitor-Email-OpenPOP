@@ -56,13 +56,21 @@ namespace Leitor_E_mail.Forms
         #region processors
         private void carregaListas()
         {
-            foreach (string path in Directory.GetFiles(Path.GetDirectoryName(System.AppDomain.CurrentDomain.BaseDirectory) + @"\Resources\StdSenders"))
+            if (Directory.Exists(Path.GetDirectoryName(System.AppDomain.CurrentDomain.BaseDirectory) + @"\Resources\StdSenders"))
             {
-                if (path.Contains(".sem"))
+                foreach (string path in Directory.GetFiles(Path.GetDirectoryName(System.AppDomain.CurrentDomain.BaseDirectory) + @"\Resources\StdSenders"))
                 {
-                    stdMails.Add(path.Replace(System.AppDomain.CurrentDomain.BaseDirectory + @"\Resources\StdMails\", "").Replace(".sem", "")
-                                , path);
+                    if (path.Contains(".sem"))
+                    {
+                        stdMails.Add(path.Replace(System.AppDomain.CurrentDomain.BaseDirectory + @"\Resources\StdMails\", "").Replace(".sem", "")
+                                    , path);
+                    }
                 }
+            }
+            else
+            {
+                Directory.CreateDirectory(Path.GetDirectoryName(System.AppDomain.CurrentDomain.BaseDirectory) + @"\Resources\StdSenders");
+                carregaListas();
             }
         }
         private void CarregaComboBox()
@@ -71,7 +79,8 @@ namespace Leitor_E_mail.Forms
             {
                 combo.Items.Add(key);
             }
-            combo.SelectedIndex = 0;
+            if(combo.Items.Count > 0)
+                combo.SelectedIndex = 0;
         }
 
         #endregion

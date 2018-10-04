@@ -26,3 +26,21 @@ C:\Projects\rafael.cassiolato\Próprios\Cliente de Email\Leitor_E-mail\obj\Debug
 C:\Projects\rafael.cassiolato\Próprios\Cliente de Email\Leitor_E-mail\bin\Debug\Resources\StdMails\MailStd.txt
 C:\projects\rafael.cassiolato\Próprios\Cliente de Email\Leitor_E-mail\obj\Debug\Leitor_E_mail.Forms.StdMail.resources
 C:\projects\rafael.cassiolato\Próprios\Cliente de Email\Leitor_E-mail\obj\Debug\Leitor_E_mail.Forms.SetaEnvioAutomatico.resources
+C:\Users\rafael.cassiolato\Desktop\Rafael C\github\Reader-Email-OpenPOP-master\Leitor_E-mail\bin\Debug\Leitor_E-mail.exe.config
+C:\Users\rafael.cassiolato\Desktop\Rafael C\github\Reader-Email-OpenPOP-master\Leitor_E-mail\obj\Debug\Leitor_E-mail.exe
+C:\Users\rafael.cassiolato\Desktop\Rafael C\github\Reader-Email-OpenPOP-master\Leitor_E-mail\obj\Debug\Leitor_E-mail.pdb
+C:\Users\rafael.cassiolato\Desktop\Rafael C\github\Reader-Email-OpenPOP-master\Leitor_E-mail\bin\Debug\Resources\StdMails\MailStd.txt
+C:\Users\rafael.cassiolato\Desktop\Rafael C\github\Reader-Email-OpenPOP-master\Leitor_E-mail\bin\Debug\Resources\server.csv
+C:\Users\rafael.cassiolato\Desktop\Rafael C\github\Reader-Email-OpenPOP-master\Leitor_E-mail\bin\Debug\Leitor_E-mail.exe
+C:\Users\rafael.cassiolato\Desktop\Rafael C\github\Reader-Email-OpenPOP-master\Leitor_E-mail\bin\Debug\Leitor_E-mail.pdb
+C:\Users\rafael.cassiolato\Desktop\Rafael C\github\Reader-Email-OpenPOP-master\Leitor_E-mail\bin\Debug\OpenPop.dll
+C:\Users\rafael.cassiolato\Desktop\Rafael C\github\Reader-Email-OpenPOP-master\Leitor_E-mail\obj\Debug\Leitor_E-mail.csprojResolveAssemblyReference.cache
+C:\Users\rafael.cassiolato\Desktop\Rafael C\github\Reader-Email-OpenPOP-master\Leitor_E-mail\obj\Debug\Leitor_E_mail.Forms.AddServer.resources
+C:\Users\rafael.cassiolato\Desktop\Rafael C\github\Reader-Email-OpenPOP-master\Leitor_E-mail\obj\Debug\Leitor_E_mail.Forms.ConfigAutomaticMail.resources
+C:\Users\rafael.cassiolato\Desktop\Rafael C\github\Reader-Email-OpenPOP-master\Leitor_E-mail\obj\Debug\Leitor_E_mail.Forms.Email.resources
+C:\Users\rafael.cassiolato\Desktop\Rafael C\github\Reader-Email-OpenPOP-master\Leitor_E-mail\obj\Debug\Leitor_E_mail.Forms.EnviarEmail.resources
+C:\Users\rafael.cassiolato\Desktop\Rafael C\github\Reader-Email-OpenPOP-master\Leitor_E-mail\obj\Debug\Leitor_E_mail.Forms.SetaEnvioAutomatico.resources
+C:\Users\rafael.cassiolato\Desktop\Rafael C\github\Reader-Email-OpenPOP-master\Leitor_E-mail\obj\Debug\Leitor_E_mail.Forms.StdMail.resources
+C:\Users\rafael.cassiolato\Desktop\Rafael C\github\Reader-Email-OpenPOP-master\Leitor_E-mail\obj\Debug\Leitor_E_mail.Principal.resources
+C:\Users\rafael.cassiolato\Desktop\Rafael C\github\Reader-Email-OpenPOP-master\Leitor_E-mail\obj\Debug\Leitor_E_mail.Properties.Resources.resources
+C:\Users\rafael.cassiolato\Desktop\Rafael C\github\Reader-Email-OpenPOP-master\Leitor_E-mail\obj\Debug\Leitor_E-mail.csproj.GenerateResource.Cache
